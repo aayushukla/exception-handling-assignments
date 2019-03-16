@@ -27,18 +27,18 @@ public class TaxCalculator {
 		this.employeeSalary = employeeSalary;
 	}
 
-	public double taxCalculator(double sal) throws TaxNotEligibleException {
+	public double taxCalculator(double sal) throws TaxNotEligibleException,CountryNotValidException, EmployeeNameInvalidException{
 		if (sal > 100000 && isIndian == true) {
 			return ((sal * 8) / 100);
 		} else if (sal > 50000 && sal < 100000 && isIndian == true) {
 			return ((sal * 6) / 100);
 		} else if (sal > 30000 && sal < 50000 && isIndian == true) {
 			return ((sal * 5) / 100);
-		} else if (sal > 10000 && sal < 30000 && isIndian == true) {
+		} else if (sal > 10001 && sal < 30000 && isIndian == true) {
 			return ((sal * 4) / 100);
 		} else
+			System.out.println("error");
 			throw new TaxNotEligibleException("Not applicable for tax");
-
 	}
 
 	public boolean isIndian() {
