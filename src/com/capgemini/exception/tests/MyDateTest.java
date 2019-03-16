@@ -19,72 +19,79 @@ public class MyDateTest {
 	
 	// test for valid days
 	@Test
-	public void testForValidDay1()
+	public void testForValidDay1() throws DayEnteredNotValidException, MonthEnteredNotValidException
 	{
 		try {
 			object1 = new MyDate(30,1,1998);
 		} catch (Exception e) {
 			System.out.println("invalid date entered");
+			testForInvalidDay1();
 		}
 	}
 	
 	@Test
-	public void testForValidDay2()
+	public void testForValidDay2() throws DayEnteredNotValidException, MonthEnteredNotValidException
 	{
 		try {
 			object2 = new MyDate(11,12,1998);
 		} catch (Exception e) {
 			System.out.println("invalid date entered");
+			testForInvalidDay2();
 		}
 	}
 	
 	@Test
-	public void testForValidDay3()
+	public void testForValidDay3() throws DayEnteredNotValidException, MonthEnteredNotValidException
 	{
 		try {
 			object3 = new MyDate(11,12,1998);
 		} catch (Exception e) {
 			System.out.println("invalid date entered");
+			testForInvalidDay1();
 		}
 	}
 	
 	@Test
-	public void testForValidDay4()
+	public void testForValidDay4() throws DayEnteredNotValidException, MonthEnteredNotValidException
 	{
 		try {
 			object4 = new MyDate(11,12,1998);
 		} catch (Exception e) {
 			System.out.println("invalid date entered");
+			testForInvalidDay1();
 		}
 	}
 	
 	@Test
-	public void testForValidDay5()
+	public void testForValidDay5() throws DayEnteredNotValidException, MonthEnteredNotValidException
 	{
 		try {
 			object5 = new MyDate(21,2,2998);
 		} catch (Exception e) {
 			System.out.println("invalid date entered");
+			testForInvalidDay1();
 		}
 	}
 	
 	@Test
-	public void testForValidDay6()
+	public void testForValidDay6() throws DayEnteredNotValidException, MonthEnteredNotValidException
 	{
 		try {
 			object6 = new MyDate(21,12,1998);
 		} catch (Exception e) {
 			System.out.println("invalid date entered");
+			testForInvalidDay1();
 		}
 	}
 	
 	@Test
-	public void testForValidDa7()
+	public void testForValidDa7() throws DayEnteredNotValidException, MonthEnteredNotValidException
 	{
 		try {
 			object7 = new MyDate(23,12,2009);
 		} catch (Exception e) {
 			System.out.println("invalid date entered");
+			testForInvalidDay1();
 		}
 	}
 	
@@ -129,40 +136,44 @@ public class MyDateTest {
 	
 	// test for valid month
 	@Test
-	public void testForValidMonth1()
+	public void testForValidMonth1() throws DayEnteredNotValidException, MonthEnteredNotValidException
 	{
 		try {
 			object1 = new MyDate(11,12,1998);
 		} catch (Exception e) {
 			System.out.println("invalid month entered");
+			testForInvalidMonth();
 		}
 	}
 	
 	@Test
-	public void testForValidMonth2()
+	public void testForValidMonth2() throws DayEnteredNotValidException, MonthEnteredNotValidException
 	{
 		try {
 			object2 = new MyDate(11,12,1998);
 		} catch (Exception e) {
 			System.out.println("invalid month entered");
+			testForInvalidMonth();
 		}
 	}
 	@Test
-	public void testForValidMonth3()
+	public void testForValidMonth3() throws DayEnteredNotValidException, MonthEnteredNotValidException
 	{
 		try {
 			object3= new MyDate(11,12,1998);
 		} catch (Exception e) {
 			System.out.println("invalid month entered");
+			testForInvalidMonth();
 		}
 	}
 	@Test
-	public void testForValidMonth4()
+	public void testForValidMonth4() throws DayEnteredNotValidException, MonthEnteredNotValidException
 	{
 		try {
 			object4 = new MyDate(11,12,1998);
 		} catch (Exception e) {
 			System.out.println("invalid month entered");
+			testForInvalidMonth();
 		}
 	}
 	@Test

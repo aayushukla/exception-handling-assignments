@@ -11,11 +11,12 @@ public class StudentTest {
 	Student student;
 
 	@Test
-	public void testForAgeWithinRangeException() {
+	public void testForAgeWithinRangeException() throws AgeNotWithinRangeException, NameNotValidException {
 		try {
 			student = new Student(1, "aayush", 19, "CSE");
 		} catch (Exception e) {
 			System.out.println("error");
+			 testForAgeNot();
 		}
 	}
 
@@ -27,11 +28,12 @@ public class StudentTest {
 	}
 	
 	@Test
-	public void testForValidName() {
+	public void testForValidName() throws AgeNotWithinRangeException, NameNotValidException {
 		try {
 			student = new Student(1, "aayush", 16, "CSE");
 		} catch (Exception e) {
 			System.out.println("error");
+			testForInvalidName();
 		}
 	}
 	
